@@ -1,0 +1,95 @@
+@import url("./reset.css");
+@import url("./common.css");
+.guest {
+  padding: 0 10%; /*body 태그에 좌우 여백 부여*/
+}
+
+.guest__header {
+  display: flex;
+  justify-content: space-between; /*요소 좌우 정렬ㄹㄹㄹㄹ*/
+}
+
+.guest__header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /*flex요소간의 간격 정해줌*/
+}
+
+.guest__header__right a {
+  color: var(--main-color);
+}
+
+.guest__form {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column; /*요소가 수직으로 쌓이도록*/
+  gap: 1rem;
+}
+.guest__form p {
+  font-size: 32px;
+}
+.guest__form input {
+  width: 70%;
+}
+.guest__form textarea {
+  width: 70%;
+  resize: none; /*사용자가 크기를 조절할수 없게*/
+}
+.guest__form button {
+  width: 15%;
+  height: 30px;
+  background-color: var(--btn);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.guest__comment {
+  border-top: 1px solid var(--dark-gray);
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.guest__comment__left {
+  padding: 2rem;
+  width: 15%;
+}
+
+.guest__comment__left__name {
+  background-color: var(--dark-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+}
+
+.guest__comment__right {
+  width: 70%;
+  padding: 1rem;
+}
+
+.guest__comment__right__time {
+  margin-top: 1rem;
+  color: var(--comment-time);
+}
+.guest__commnet_right__del {
+  display: flex;
+  width: 15%;
+}
+
+.guest__commnet_right__del button {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 40px;
+  background-color: var(--btn);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,468 @@
+@import url(./reset.css);
+@import url(./common.css);
+
+.home__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__header__right {
+  /* 헤더의 오른쪽 부분 */
+  display: flex;
+  align-items: center;
+  gap: 20px; /*flex 요소간의 간격을 정햐줄 수 있다.*/
+}
+
+/*학원 소개 영역*/
+.home__intro {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /*position-absolute가 있기때문에 설정*/
+  margin-top: 5rem;
+}
+
+.home__intro__left {
+  width: 50%; /*50% 크기로 왼쪽,오른쪽을 설정하기 위함*/
+}
+
+.home__intro__left__text {
+  color: var(--main-color);
+}
+
+.home__intro__left__text p:nth-child(2) {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.home__intro__left__rink-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem; /*좌우 0.5 , 상하 1 padding 부여*/
+  cursor: pointer;
+}
+
+.home__intro__left__sns {
+  position: absolute; /*sns 관련 부분을 항상 왼쪽하단에 고정
+  왼쪽하단의 기준이 부모가 position:relative된 부분임*/
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px; /*sns의 크기를 고정적으로 설정*/
+}
+.home__intro__left__sns p {
+  font-size: 40px;
+  color: var(--main-color);
+  font-weight: 700; /*font의 굵기 설정*/
+}
+.home__intro__left__sns img {
+  cursor: pointer; /*이미지에 마우스 가져다 대면 커서모양 슝슝샹샹*/
+}
+
+.home__intro__right {
+  width: 50%;
+}
+
+.home__intro__right img {
+  width: 100%; /*이미지의 크기를 유동적으로 설정하기 위함*/
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
+.home__intro__right:hover img {
+  transform: scale(1.2);
+  transform-origin: center;
+  filter: brightness(120%);
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
+
+.home__description {
+  text-align: center; /*text를 가운데 정렬해주는 옵션*/
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.home__description p:nth-of-type(1) {
+  /*p태그의 첫번쨰에 css 적용*/
+  margin-top: 3rem;
+  font-size: 48px;
+  font-weight: 900;
+}
+.home__description span:nth-of-type(2) {
+  /*span태그의 두번쨰 값*/
+  color: var(--dark-gray);
+}
+.home__description p:nth-of-type(n) {
+  /*n으로 두면 p태그 모두가 설정된다 (p만쓰는 것과 같은 동작원리)*/
+  margin-top: 3rem;
+}
+.home__description p:nth-of-type(8) {
+  margin-top: 8rem;
+}
+
+.home__description p:nth-of-type(9) {
+  font-size: 36px;
+  font-weight: 700;
+}
+.home__description span.bold {
+  /*중간중간 굵게 만들어줄 css*/
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.home__description__logo-container {
+  margin: auto; /*가운데 정렬*/
+  display: flex; /*c의 위치를 중앙으로 만들어줌*/
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: var(--logo-background);
+}
+
+.home__description__logo {
+  color: white;
+  font-size: 100px;
+  margin-bottom: 10px; /*c의 높이가 맞지않기에 margin으로 강제로 맟춰줌*/
+  font-weight: 900;
+}
+
+.home__learn-skills__title {
+  color: var(--dark-gray);
+  margin-top: 20rem;
+}
+
+.home__learn-skills__title .bold {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.home__learn-skills__title__flex-box {
+  display: flex;
+  color: var(--main-color);
+}
+
+.home__learn-skills__container {
+  width: 70%;
+  margin: 5rem auto;
+  border: 1px solid var(--dark-gray);
+  border-radius: 10px; /*테두리 둥글둥글ㄹㄹㄹ*/
+  padding: 3rem;
+}
+
+.home__learn-skills__flex-box {
+  display: flex;
+  justify-content: space-around; /*요소를 가로로 유연허게 정렬*/
+}
+
+.home__learn-skills__flex-box:last-child {
+  align-items: flex-end; /*요소를 아래로 정렬*/
+  margin-top: -2rem; /*박스가 겹쳐 보이게끔 -값을 마진으로 줌*/
+}
+
+.home__learn-skills__step {
+  width: 20%;
+  border-radius: 20px;
+  color: white;
+  padding: 2rem;
+}
+
+.home__learn-skills__step p:first-child {
+  margin-bottom: 2rem;
+}
+.home__learn-skills__flex-box .step1 {
+  height: 100px;
+  background-color: var(--dark-gray);
+}
+.home__learn-skills__flex-box .step2 {
+  height: 160px;
+  background-color: var(--main-color);
+}
+.home__learn-skills__flex-box .step3 {
+  height: 100px;
+  background-color: var(--soft-gray);
+  color: black;
+}
+.home__learn-skills__flex-box .step4 {
+  height: 160px;
+  background-color: var(--soft-gray);
+  color: black;
+}
+.home__learn-skills__flex-box .step5 {
+  height: 100px;
+  background-color: var(--dark-gray);
+}
+.home__learn-skills__flex-box .step6 {
+  height: 160px;
+  background-color: var(--main-color);
+}
+.home__learn-skills__container {
+  width: 70%;
+  margin: 5rem auto;
+  border: 1px solid var(--dark-gray);
+  border-radius: 10px;
+  padding: 3rem;
+  position: relative;
+}
+
+/*스킬 선택*/
+.home__learn-skills__select-skill {
+  width: 50%;
+  position: absolute; /*요소를 부모요소를 기준으로 띄우기 위함*/
+  top: -25px; /*box의 크기가 50px이므로 선에 딱 걸치도록 */
+  display: flex; /*요소를 정렬을 위함*/
+  justify-content: space-between;
+}
+.home__learn-skills__skill-box {
+  display: flex; /*글씨 중앙정렬*/
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--soft-gray);
+  color: black;
+  font-weight: 700;
+  cursor: pointer; /*커서모양 번경*/
+}
+
+.home__learn-skills__skill-box:hover {
+  /*hover시 색이 변동되도록*/
+  background-color: var(--dark-gray);
+  color: white;
+}
+.home__learn-skills__skill-box .selected/*현재 선택된 영역*/ {
+  color: white;
+  background-color: var(--dark-gray);
+}
+.home__learn__container-page3 {
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: 1000;
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__learn__container-page3-understart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__learn__container-page3-all {
+  width: 80%;
+}
+.home__learn__container-page3-all-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+  height: 120px;
+  font-weight: 1000;
+  font-size: 20px;
+}
+.home__learn__container-page3-top1 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.home__learn__container-page3-top2 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.home__learn__container-page3-top3 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.home__learn__container-page3-top4 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+
+.home__learn__container-page3-all-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+  height: 150px;
+  font-weight: 1000;
+  font-size: 20px;
+  margin-bottom: 5rem;
+}
+.home__learn__container-page3-top1__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-top2__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-top3__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-top4__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-bottom1__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-bottom2__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-bottom3__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-bottom4__box {
+  margin-bottom: 1rem;
+}
+.home__learn__container-page3-bottom1 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+
+.home__learn__container-page3-bottom2 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.home__learn__container-page3-bottom3 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.home__learn__container-page3-bottom4 {
+  color: var(--main-color);
+  text-align: center;
+  height: 50px;
+}
+.learn-by-comseba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.learn-by-comseba-name p:nth-of-type(1) {
+  color: var(--dark-gray);
+  margin-top: 3rem;
+  font-size: 48px;
+  font-weight: 900;
+}
+.learn-by-comseba-name span:nth-of-type(2) {
+  color: var(--main-color);
+}
+
+.learn-by-comseba-youlearn {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.learn-by-comseba-youlearn p:nth-of-type(1) {
+  margin-top: 8rem;
+}
+.learn-by-comseba-youlearn span:nth-of-type(1) {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 900;
+}
+.learn-by-comseba-youlearn span:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: 900;
+}
+.learn-by-comseba-youlearn-box {
+  display: flex;
+  width: 140%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.learn-by-comseba-learnforwhat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.learn-by-comseba-learnforwhat p:nth-of-type(1) {
+  margin-top: 8rem;
+}
+
+.learn-by-comseba-learnforwhat span:nth-of-type(1) {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 900;
+}
+.learn-by-comseba-learnforwhat span:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.learn-by-comseba-learnforwhat-box {
+  display: flex;
+  width: 140%;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+.why-comseba {
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+.why-comseba-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.why-comseba-up-container {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+.why-comseba-up-why {
+  margin-right: 2rem;
+  color: var(--main-color);
+}
+.why-comseba-up-comseba {
+  margin-left: 2rem;
+}
+.why-comseba-down {
+  display: flex;
+  width: 100%;
+  margin-top: 10rem;
+}
+.why-comseba-down-images {
+  display: flex;
+  width: 100%;
+}
+.why-comseba-down-images-box {
+  width: 100%;
+}
+.why-comseba-down-images-box img {
+  width: 90%;
+}
+.reallyisthistheend {
+  margin-top: 15rem;
+  background-color: var(--noncolor);
+  font-size: 14px;
+  color: var(--nonfontcolor);
+  width: 100%;
+  position: absolute;
+  left: 0%;
+}
+.reallyisthistheend-sentence2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.reallyisthistheend-sentence2-2-non {
+  color: var(--noncolor);
+}
