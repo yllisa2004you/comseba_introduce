@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 //post 요청 시 request.body를 가져올 수 있게 하는 옵션
 console.log(app);
 
-const port = 3000;
+const port = 80;
 //url의 포트 설저ㅏㅇ
 
 app.get("/", (req, res) => {
@@ -56,6 +56,6 @@ app.post("/createcomment", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server is listening at localhost: 3000`);
+  console.log(`server is listening at localhost: 80`);
 });
 //서버가 처음 생성되었을떄 실행되는 함수
